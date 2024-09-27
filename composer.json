@@ -1,6 +1,6 @@
 {
     "name": "mgluiz/gemini-math",
-    "description": "Aplicação em PHP com Laravel que utiliza da Inteligência Artificial da Google (Gemini), como tutor auxiliar para equações e problemas matemáticos por imagem ou texto",
+    "description": "Aplicação em PHP inpirada no PhotoMath que utiliza a Inteligência Artificial da Google (Gemini), como tutor auxiliar para equações e problemas matemáticos por imagem ou texto",
     "type": "project",
     "license": "MIT",
     "autoload": {
