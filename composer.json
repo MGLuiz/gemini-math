@@ -1,0 +1,19 @@
+{
+    "name": "mgluiz/gemini-math",
+    "description": "Aplicação em PHP com Laravel que utiliza da Inteligência Artificial da Google (Gemini), como tutor auxiliar para equações e problemas matemáticos por imagem ou texto",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mgluiz\\GeminiMath\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luiz Brito",
+            "email": "mgluiz1781@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
