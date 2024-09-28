@@ -1,10 +1,13 @@
 <?php
 
 require_once 'vendor/autoload.php';
+require_once 'src/Routes/api.php';
+
+use GMath\Core\Core;
+use GMath\Http\Route;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-var_dump($_ENV['GEMINI_API_KEY']);
-
+Core::dispatch(Route::getRoutes());
 ?>
