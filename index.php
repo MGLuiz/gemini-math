@@ -1,7 +1,8 @@
 <?php
 
-require_once '../vendor/autoload.php';
-require_once '../src/Routes/api.php';
+require_once 'vendor/autoload.php';
+require_once 'src/Routes/web.php';
+require_once 'src/Routes/api.php';
 
 use GMath\Core\Core;
 use GMath\Http\Route;

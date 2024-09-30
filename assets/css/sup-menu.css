@@ -1,0 +1,53 @@
+.top-menu{
+    position: absolute;
+    left: 20%;
+    top: 2rem;
+    z-index: 69;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.top-menu-btn{
+    width: fit-content;
+    background: var(--linear-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.6rem;
+    border: none;
+    border-radius: 50%;
+}
+
+.top-menu-btn i{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.top-menu ul{
+    list-style: none;
+    display: grid;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    margin-top: 6px;
+    transition: .5s;
+    overflow-y: hidden;
+    height: 0;
+}
+.top-menu ul.show{
+    height: 204px;
+}
+
+.top-menu a{text-decoration: none;}
+
+.top-menu a li{
+    text-align: center;
+    background: #fff;
+    padding: 1rem 2.5rem;
+    color: #000;
+    transition: .5s;
+    border-radius: 16px;
+}
+.top-menu a li:hover{
+    background: var(--tertiary-color);
+    color: #fff;
+}
