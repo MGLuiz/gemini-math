@@ -9,6 +9,8 @@ use GMath\Services\GeminiApi;
 class GeminiApiController{
     
     public function solveImage(Request $request, Response $response, array $matches){
+        self::bodyValidation($request::body());
+        
         extract($request::body());
 
         if ($answerType == 'quick'){
@@ -33,6 +35,21 @@ class GeminiApiController{
                 'success' => false,
                 'message' => "Answer Type is invalid",
             ], 400);
+
+            exit;
+        }
+    }
+
+    private static function bodyValidation(array $body){
+        
+        if(empty($body) || empty($body['imageUrl'])){
+            Response::json([
+                'erro' => true,
+                'success' => false,
+                'message' => "Missing body json input",
+            ], 400);
+
+            exit;
         }
     }
 }
