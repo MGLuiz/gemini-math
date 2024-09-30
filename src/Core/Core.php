@@ -2,7 +2,6 @@
 
 namespace GMath\Core;
 
-use Dotenv\Util\Regex;
 use GMath\Http\Request;
 use GMath\Http\Response;
 
