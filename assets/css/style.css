@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Rubik", system-ui;
+    font-family: "Poppins", system-ui;
 }
 
 body::-webkit-scrollbar {
@@ -67,7 +67,9 @@ body{
     padding: 1rem 3rem;
     background-color: #fff;
     border-radius: 32px;
+    border: 2px dashed rgba(128, 128, 128, 0.7);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 label[for="image-input"].btn-image-input{
@@ -79,6 +81,24 @@ label[for="image-input"].btn-image-input{
 #image-input{
     display: none;
     cursor: pointer;
+}
+
+.img-selector{
+    max-width: 42px;
+}
+
+.send-icon{
+    background: none; 
+    border: none; 
+    width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    display: none;
+}
+.send-icon.show{
+    display: block;
 }
 
 .question-output{
