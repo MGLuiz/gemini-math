@@ -8,8 +8,12 @@ use GMath\Services\RenderView;
 
 class HomeController{
     
-    public function index(Request $request, Response $response, array $matches){
+    public function solveImage(Request $request, Response $response, array $matches){
         RenderView::loadView("SolveByImageView");
+    }
+
+    public function solveText(Request $request, Response $response, array $matches){
+        RenderView::loadView("SolveByTextView");
     }
 }
 

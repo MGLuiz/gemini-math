@@ -2,6 +2,7 @@
 
 use GMath\Http\Route;
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@solveImage');
+Route::get('/solveText', 'HomeController@solveText');
 
 ?>
