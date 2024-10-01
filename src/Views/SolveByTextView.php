@@ -46,7 +46,7 @@
 <section class="container">
         <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gemini_language_model_logo.png/640px-Gemini_language_model_logo.png" alt="Gemini Math Logo"></div>
         
-        <form>
+        <form method="POST">
 
             <div class="answer-switch">
                 <span>Quick Answer</span>
@@ -59,15 +59,9 @@
         
 
             <div class="question-input">
-                <input type="file" name="imageInput" id="image-input">
+                <input type="file" name="image-input" id="image-input">
                 <label for="image-input" class="btn-image-input">
-                    <img src="/assets/icons/image-icon.svg" alt="image selector" class="img-selector">
                 </label>
-                <label for="image-input" style="cursor: pointer">Click and add an Image or drag here</label>
-            
-                <button type="submit" class="send-icon">
-                    <img src="/assets/icons/paper-plane.svg" alt="send icon" >
-                </button>
             </div>
 
         </form>
