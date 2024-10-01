@@ -42,12 +42,15 @@ class Core {
             }
         }
 
-        if (!$routeFound){
-            if (!$routeFound) {
-                $controller = $prefixController . 'NotFoundController';
-                $extendController = new $controller();
-                $extendController->index(new Request, new Response);
-            }
+        $controller = $prefixController . 'NotFoundController';
+
+        if (!$routeFound && Request::method() != 'GET') {
+            $extendController = new $controller();
+            $extendController->notFoundApiRoute(new Request, new Response);
+
+        }else if(!$routeFound && Request::method() == 'GET'){
+            $extendController = new $controller();
+            $extendController->notFoundWebRoute(new Request, new Response);
         }
     }
 }
