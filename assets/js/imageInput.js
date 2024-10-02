@@ -1,3 +1,5 @@
+import { imgRequest } from "./requestFactory.js";
+
 const imgInput = document.querySelector('#image-input');
 const imgMimes = ["image/jpeg", "image/jpg", "image/png"];
 
@@ -7,7 +9,6 @@ const sendIcon = document.querySelector('.send-icon');
 export function initImageInput(){
     imgInput.addEventListener('change', (event) => {
 
-        console.log(imgInput.files);
         if (imgInput.files.length > 0){
 
             if(!imgMimes.includes(imgInput.files[0].type)){
@@ -19,5 +20,42 @@ export function initImageInput(){
             sendIcon.classList.add('show');
 
         }
-    })
+    });
+}
+
+const outputTA = document.querySelector('#question-output');
+const sendImgBtn = document.querySelector('#send-btn');
+const switchAnswer = document.querySelector('.switch input')
+
+export function initImgGeminiApiRequestSender(){
+
+    sendImgBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        let reader = new FileReader();
+        reader.onload = (event) => {
+            let response = imgRequest(reader.result, switchAnswer.value);
+            response.then((r) => {
+
+                if (r.success){
+                    
+                    if (switchAnswer.value == 'quick'){
+                        outputTA.classList.add('quickShow');
+                    }
+                    if (switchAnswer.value == 'detailed'){
+                        outputTA.classList.add('detailedShow');
+                    }
+                    
+                    outputTA.innerHTML = r.solution.replace("`", '');
+                }else{
+                    outputTA.classList.add('quickShow');
+                    outputTA.innerHTML = `ERRO: ${r.message}`;
+                }
+            });
+
+        }
+        reader.readAsDataURL(imgInput.files[0]);
+    });
+
+
 }

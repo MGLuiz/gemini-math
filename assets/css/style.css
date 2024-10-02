@@ -114,11 +114,16 @@ label[for="image-input"].btn-image-input{
     padding: 2rem;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 600px;
+    height: 0;
     resize: none;
 }
-#question-output.active{
+#question-output.quickShow{
     display: block;
+    height: 100px;
+}
+#question-output.detailedShow{
+    display: block;
+    height: 600px;
 }
 
 #question-output::-webkit-scrollbar {

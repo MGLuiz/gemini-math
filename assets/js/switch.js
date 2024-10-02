@@ -4,9 +4,9 @@ export function switchAnswerInit(){
 
     switchAnswer.addEventListener('change', () => {
         if (switchAnswer.checked){
-            switchAnswer.setAttribute('value', 'detailedAnswer')
+            switchAnswer.setAttribute('value', 'detailed')
         }else{
-            switchAnswer.setAttribute('value', 'quickAnswer')
+            switchAnswer.setAttribute('value', 'quick')
         }
     })
 }
