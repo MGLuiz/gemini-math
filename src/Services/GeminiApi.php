@@ -13,7 +13,7 @@ class GeminiApi{
     public static function quickImage($imageUrl): string{
         $client = Gemini::client($_ENV['GEMINI_API_KEY']);
         
-        $prompt = "Resolva a questão da imagem sem explicar, apenas o resultado";
+        $prompt = "Interprete e esolva a questão da imagem sem explicar, apenas o resultado";
         $imageBlob = new Blob(
             mimeType: MimeType::IMAGE_JPEG,
             data: base64_encode(file_get_contents($imageUrl)),
@@ -30,7 +30,7 @@ class GeminiApi{
     public static function detailedImage($imageUrl): string{
         $client = Gemini::client($_ENV['GEMINI_API_KEY']);
 
-        $prompt = "Resolva a questão da imagem";
+        $prompt = "Inteprete e resolva a questão da imagem, seja bem detalhado";
         $imageBlob = new Blob(
             mimeType: MimeType::IMAGE_JPEG,
             data: base64_encode(file_get_contents($imageUrl)),

@@ -46,12 +46,12 @@
 <section class="container">
         <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gemini_language_model_logo.png/640px-Gemini_language_model_logo.png" alt="Gemini Math Logo"></div>
         
-        <form>
+        <form id="img-send-form">
 
             <div class="answer-switch">
                 <span>Quick Answer</span>
                 <label class="switch">
-                    <input type="checkbox" name="answerSwitch" value="">
+                    <input type="checkbox" name="answerSwitch" value="quick">
                     <span class="slider"></span>
                 </label>
                 <span>Detailed Answer</span>
@@ -65,7 +65,7 @@
                 </label>
                 <label for="image-input" style="cursor: pointer">Click and add an Image or drag here</label>
             
-                <button type="submit" class="send-icon">
+                <button type="submit" class="send-icon" id="send-btn">
                     <img src="/assets/icons/paper-plane.svg" alt="send icon" >
                 </button>
             </div>
