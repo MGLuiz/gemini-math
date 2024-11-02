@@ -64,9 +64,10 @@
                     <img src="/assets/icons/image-icon.svg" alt="image selector" class="img-selector">
                 </label>
                 <label for="image-input" style="cursor: pointer">Click and add an Image or drag here</label>
+                <label for="image-input" class="drag-area"></label>
             
                 <button type="submit" class="send-icon" id="send-btn">
-                    <img src="/assets/icons/paper-plane.svg" alt="send icon" >
+                    <img src="/assets/icons/paper-plane.svg" accept=".jpg, .jpeg, .png" alt="send icon">
                 </button>
             </div>
 

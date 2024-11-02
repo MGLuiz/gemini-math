@@ -36,7 +36,7 @@ class GeminiApi{
             data: base64_encode(file_get_contents($imageUrl)),
         );
 
-        $result = $client->generativeModel(model: 'models/gemini-1.5-flash-001')->generateContent([
+        $result = $client->generativeModel(model: 'models/gemini-1.5-flash')->generateContent([
             $prompt,
             $imageBlob
         ]);

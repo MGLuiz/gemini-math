@@ -2,11 +2,13 @@ import { imgRequest } from "./requestFactory.js";
 
 const imgInput = document.querySelector('#image-input');
 const imgMimes = ["image/jpeg", "image/jpg", "image/png"];
+const dragArea = document.querySelector('.drag-area');
 
 const imgIcon = document.querySelector('.img-selector');
 const sendIcon = document.querySelector('.send-icon');
 
 export function initImageInput(){
+    initDragnAndDropImageInput()
     imgInput.addEventListener('change', (event) => {
 
         if (imgInput.files.length > 0){
@@ -22,6 +24,29 @@ export function initImageInput(){
         }
     });
 }
+
+function initDragnAndDropImageInput(){
+    dragArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dragArea.classList.add('dragover');
+        console.log("over");
+    });
+
+    dragArea.ondragleave = (e) => {
+        dragArea.classList.remove('dragover');
+    }
+
+    dragArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dragArea.classList.remove('dragover');
+        
+        imgInput.files = e.dataTransfer.files;
+        imgIcon.setAttribute('src', URL.createObjectURL(imgInput.files[0]));
+        sendIcon.classList.add('show');
+    })
+}
+
+// --------------------------------------------------------------------------------
 
 const outputTA = document.querySelector('#question-output');
 const sendImgBtn = document.querySelector('#send-btn');
