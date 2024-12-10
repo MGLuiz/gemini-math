@@ -29,7 +29,6 @@ function initDragnAndDropImageInput(){
     dragArea.addEventListener('dragover', (e) => {
         e.preventDefault();
         dragArea.classList.add('dragover');
-        console.log("over");
     });
 
     dragArea.ondragleave = (e) => {
@@ -62,7 +61,7 @@ export function initImgGeminiApiRequestSender(){
             let response = imgRequest(reader.result, switchAnswer.value);
             response.then((r) => {
 
-                if (r.success){
+                if (typeof r.success !== 'undefined' && r.success){
                     
                     if (switchAnswer.value == 'quick'){
                         outputTA.classList.add('quickShow');

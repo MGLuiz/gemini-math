@@ -45,7 +45,6 @@
     padding: 1rem 2.5rem;
     color: #000;
     transition: .5s;
-    border-radius: 16px;
 }
 .top-menu a li:hover{
     background: var(--tertiary-color);

@@ -2,6 +2,7 @@
 
 use GMath\Http\Route;
 
-Route::post('/solveImage', 'GeminiApiController@solveImage');
+Route::post('/solveImageApi', 'GeminiApiController@solveImage');
+Route::post('/solveTextApi', 'GeminiApiController@solveText');
 
 ?>

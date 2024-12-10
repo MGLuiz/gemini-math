@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GMath</title>
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -44,7 +44,7 @@
 </div>
 
 <section class="container">
-        <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gemini_language_model_logo.png/640px-Gemini_language_model_logo.png" alt="Gemini Math Logo"></div>
+        <div class="logo"><img src="logo.png" alt="Gemini Math Logo"></div>
         
         <form id="img-send-form">
 

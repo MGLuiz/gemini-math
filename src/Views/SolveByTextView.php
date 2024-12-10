@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GMath</title>
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
     <!-- CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/solveByText.css">
 
     <!-- JavaScript -->
     <script type="module" src="/assets/js/script.js"></script>
@@ -44,14 +45,14 @@
 </div>
 
 <section class="container">
-        <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gemini_language_model_logo.png/640px-Gemini_language_model_logo.png" alt="Gemini Math Logo"></div>
+        <div class="logo"><img src="logo.png" alt="Gemini Math Logo"></div>
         
-        <form method="POST">
+        <form>
 
             <div class="answer-switch">
                 <span>Quick Answer</span>
                 <label class="switch">
-                    <input type="checkbox" name="answerSwitch" value="">
+                    <input type="checkbox" name="answerSwitch" value="quick">
                     <span class="slider"></span>
                 </label>
                 <span>Detailed Answer</span>
@@ -59,9 +60,11 @@
         
 
             <div class="question-input">
-                <input type="file" name="image-input" id="image-input">
-                <label for="image-input" class="btn-image-input">
-                </label>
+                <input type="text" name="qst-input" id="qst-input" placeholder="Enter your equation or problem situation" required>
+
+                <button type="submit" class="send-icon" id="send-text-btn">
+                    <img src="/assets/icons/paper-plane.svg" accept=".jpg, .jpeg, .png" alt="send icon">
+                </button>
             </div>
 
         </form>

@@ -132,7 +132,7 @@ label[for="image-input"].btn-image-input{
 }
 #question-output.quickShow{
     display: block;
-    height: 100px;
+    height: 160px;
 }
 #question-output.detailedShow{
     display: block;
