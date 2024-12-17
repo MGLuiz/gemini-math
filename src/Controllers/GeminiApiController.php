@@ -75,6 +75,28 @@ class GeminiApiController{
         }
     }
 
+    public static function chatVrTeacher(Request $request, Response $response, array $matches){
+        self::bodyValidation($request::body());
+        extract($request::body());
+
+        if (isset($prompt)){
+            $response::json([
+                'erro' => false,
+                'success' => true,
+                'message' => str_replace(['*'], '', GeminiApi::teacherChat($prompt)),
+            ], 200);
+            exit;
+
+        }else{
+            $response::json([
+                'erro' => true,
+                'success' => false,
+                'message' => "Answer Type is invalid",
+            ], 400);
+            exit;
+        }
+    }
+
     private static function bodyValidation(array $body){
         
         if(empty($body)){

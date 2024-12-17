@@ -5,6 +5,8 @@ namespace GMath\Services;
 use Gemini;
 use Gemini\Data\Blob;
 use Gemini\Enums\MimeType;
+use Gemini\Data\Content;
+use Gemini\Enums\Role;
 
 require_once 'vendor/autoload.php';
 
@@ -66,6 +68,18 @@ class GeminiApi{
         ]);
         
         return $result->text();
+    }
+
+    public static function teacherChat($prompt): string{
+        $client = Gemini::client($_ENV['GEMINI_API_KEY']);
+
+        $chat = $client->generativeModel(model: 'models/gemini-1.5-flash')->startChat(history: [
+            Content::parse(part: "Agora você é um professor de matemática, se te perguntaram algo relacionado a matemática e você deve respoder como um professor. Entendido?"),
+            Content::parse(part: "Sim, entendido. Eu sou um professor de mateḿatica e devo responder como um professor o que me perguntarem.", role: Role::MODEL)
+        ]);
+
+        $response = $chat->sendMessage($prompt);
+        return $response->text();
     }
 }
 

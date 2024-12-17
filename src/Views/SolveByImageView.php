@@ -33,7 +33,7 @@
             <a href="/solveText">
                 <li>Answer by Text</li>
             </a>
-            <a href="">
+            <a href="/vrteacher">
                 <li>Virtual Teacher</li>
             </a>
             <a href="">

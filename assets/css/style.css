@@ -50,8 +50,12 @@ body{
     width: 400px;
 }
 
+form{
+    padding: 2rem 0 0 0;
+}
+
 .answer-switch{
-    padding: 2rem 0 0.7rem 0;
+    padding: 0 0 0.7rem 0;
     display: flex;
     justify-content: center;
     align-items: center;

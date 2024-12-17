@@ -5,17 +5,21 @@ import { initTextInput } from './textInput.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     initSupMenu();
-    switchAnswerInit();
-
+    
     switch (window.location.pathname){
         case "/":
             initImageInput();
             initImgGeminiApiRequestSender();
-            break;
-
+            switchAnswerInit();
+        break;
+            
         case "/solveText":
             initTextInput();
-            break;
+            switchAnswerInit();
+        break;
+
+        case "/vrteacher":
+            
     }
     
 });
