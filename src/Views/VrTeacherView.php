@@ -74,14 +74,6 @@
                         </p>
                     </div>
                 </div>
-                
-                <div class="user-msg">
-                    <div class="pp"><img src="https://cdn-icons-png.flaticon.com/512/5951/5951752.png" alt="User profile picture"></div>
-                    <div class="msg-box">
-                        <p></p>
-                    </div>
-                </div>
-
             </div>
         </div> 
     </div>

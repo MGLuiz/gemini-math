@@ -2,6 +2,7 @@ import { initSupMenu } from './supMenu.js';
 import { switchAnswerInit } from './switch.js';
 import { initImageInput, initImgGeminiApiRequestSender } from './imageInput.js';
 import { initTextInput } from './textInput.js';
+import { initVRTeacher } from './VRTeacher.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     initSupMenu();
@@ -19,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
 
         case "/vrteacher":
-            
+            initVRTeacher();
+        break;
     }
     
 });

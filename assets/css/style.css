@@ -50,6 +50,12 @@ body{
     width: 400px;
 }
 
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
 form{
     padding: 2rem 0 0 0;
 }
