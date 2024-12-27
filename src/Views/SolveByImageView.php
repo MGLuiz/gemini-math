@@ -36,7 +36,7 @@
             <a href="/vrteacher">
                 <li>Virtual Teacher</li>
             </a>
-            <a href="">
+            <a href="/about">
                 <li>About Gmath</li>
             </a>
         </ul>

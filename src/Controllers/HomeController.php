@@ -19,6 +19,10 @@ class HomeController{
     public function vrTeacher(Request $request, Response $response, array $matches){
         RenderView::loadView("VrTeacherView");
     }
+
+    public function about(Request $request, Response $response, array $matches){
+        RenderView::loadView("AboutView");
+    }
 }
 
 ?>
