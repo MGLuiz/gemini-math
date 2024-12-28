@@ -69,3 +69,42 @@ section#about{
 .body{
     padding: 2rem 0 0.5rem 0;
 }
+
+@media (max-width: 700px) {
+    .container{
+        width: 100%;
+        padding: 0;
+    }
+
+    header{
+        top: 1.5rem;
+        gap: 0;
+        max-width: 390px;
+        justify-content: center;
+    }
+
+    .title{
+        display: none;
+    }
+
+    section#about{
+        padding: 1rem;
+        width: 90%;
+        text-align: justify;
+    }
+
+    .logo{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 450px){
+    header{
+        width: 90%;
+    }
+
+    header span{
+        font-size: 1em;
+    }
+}

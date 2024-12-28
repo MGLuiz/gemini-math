@@ -90,7 +90,40 @@ input #prompt:focus{
     width: 90%;
 }
 
-
 .msg-box ul{
     padding-left: 4rem;
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 98%;
+    }
+
+    #question-output{
+        padding: 0.5rem;
+    }
+
+    .question-input{
+        width: 90%;
+    }
+}
+
+@media (max-width: 425px) {
+    .container{
+        padding: 0;
+    }
+    
+    .pp{
+        width: 30px;
+    }
+
+    .pp img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .user-msg,
+    .teacher-msg{
+        gap: 0.1rem;
+    }
 }
